@@ -72,3 +72,22 @@ Superuser created successfully.
 '''
 # 10.(myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py runserver
 
+
+
+# wrzucanie djangoblog na chmurę pythonanwhere.com
+# pythonanywhere.com/dashboard--> bash console
+#w konsoli:
+# pip install --user pythonanywhere  -  instalacja pythona w chmurze
+# pa_autoconfigure_django.py https://github.com/bioly1910/venv.git  -  wrzucanie naszego bloga i tworzenie środowiska wirtualnego w chmurze
+# python manage.py createsuperuser  -  tworzymy użytkownika(administratora) w naszej chmurze
+
+'''
+Nazwa użytkownika (leave blank to use 'micha'): bioly1910
+Adres e-mail: grabarzmichal@gmail.com
+Password: 
+Password (again): 
+Hasło jest zbyt podobne do nazwa użytkownika.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+'''
+# https://bioly1910.pythonanywhere.com - adres naszej strony
