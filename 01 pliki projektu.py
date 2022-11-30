@@ -67,10 +67,10 @@ DATABASES = {
 
 # Dla Ubuntu
 # cd /home/micha/venv   --->   source myvenv/bin/activate
-# (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ django-admin startproject mysite .        (wykonujemy tylko raz)
-# (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py migrate                  (wykonujemy tylko raz)
-# (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py runserver 
-# (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py startapp blog            tworzymy nową aplikację
+# (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ django-admin startproject mysite .        (wykonujemy tylko raz)
+# (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py migrate                  (wykonujemy tylko raz)
+# (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py runserver 
+# (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py startapp blog            tworzymy nową aplikację
 
 '''
 Watching for file changes with StatReloader

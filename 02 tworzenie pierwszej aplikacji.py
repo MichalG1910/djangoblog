@@ -1,5 +1,5 @@
 
-# 1. (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py startapp blog     tworzymy nową aplikację
+# 1. (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py startapp blog     tworzymy nową aplikację
 # 2. dodajemy naszą aplikację do pliku settings.py
 
 INSTALLED_APPS = [
@@ -32,13 +32,13 @@ class Post(models.Model):
         return self.title
 
 # 4. przechodzimy do terminala
-#    (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py makemigrations blog      tworzymy migrację naszego modelu do bazy danych
+#    (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py makemigrations blog      tworzymy migrację naszego modelu do bazy danych
 '''
 Migrations for 'blog':
   blog/migrations/0001_initial.py
     - Create model Post                     # dostajemy informacje o stworzeniu nowego modelu (odpowiednik modułu)
 '''
-# 5. (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py migrate blog         dokonujemy migracji modelu do bazy danych
+# 5. (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py migrate blog         dokonujemy migracji modelu do bazy danych
 
 '''
 Operations to perform:
@@ -55,11 +55,11 @@ from .models import Post
 admin.site.register(Post)               # rejestrujemy nasz model Post
 
 # 7. po operacjijak wyżej możemy uruchomić nasz projekt na serwerze
-#     (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py runserver
+#     (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py runserver
 # 8. (w chrome) 127.0.0.1:8000/admin   -   przechodzimy do panelu administracji django 
 #     Prosi nas o podanie użytkownika i hasła (których nie mamy). Musimy je utworzyć
 #     - zatrzymujemy w terminalu nasz projekt(ctrl + C)  
-# 9. (myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py createsuperuser   -   tworzymy użytkownika(administratora)
+# 9. (myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py createsuperuser   -   tworzymy użytkownika(administratora)
 
 '''
 Nazwa użytkownika (leave blank to use 'micha'): bioly1910
@@ -70,7 +70,7 @@ Hasło jest zbyt podobne do nazwa użytkownika.
 Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.
 '''
-# 10.(myvenv) micha@micha-GF63-Thin-10UC:~/venv$ python manage.py runserver
+# 10.(myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py runserver
 
 
 

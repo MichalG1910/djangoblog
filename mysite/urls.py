@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path(r'^admin/(/d+)$', admin.site.urls) # tzw regex (jest to zapis url z wyrażeniami regularnymi(możemy dzięki niemu np. rozróżniać posty przez dodanie cyfry do każdego z nich)). Jest to metoda przestarzała, rzadko już spotykana
+    path('',include('blog.urls')) # ''- pusty zapis powoduje, że gdy wpiszemy adres url(np. naszej strony 127.0.0.1:8000), to include podłączy do niego plik blog.urls
 ]
