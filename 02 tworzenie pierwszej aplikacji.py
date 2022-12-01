@@ -72,7 +72,7 @@ Superuser created successfully.
 '''
 # 10.(myvenv) micha@micha-GF63-Thin-10UC:~/djangoblog$ python manage.py runserver
 
-
+###################### pythonanywhere.com ##############################################
 
 # wrzucanie djangoblog na chmurę pythonanwhere.com
 # pythonanywhere.com/dashboard--> bash console
@@ -91,3 +91,14 @@ Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.
 '''
 # https://bioly1910.pythonanywhere.com - adres naszej strony
+
+# Aktualizacja naszej strony w chmurze:
+'''
+1. otwórz bash console
+2. ls - wyświetli listę katalogów
+3. cd bioly1910.pythonanywhere.com - wchodzimy do katalogu z naszą stroną
+4. git pull  -  pobierze wszystkie zmiany naszej strony z naszego repezytorium Git
+5. przejdź z bash console do zakładki Web
+6. Reload bioly1910.pythonanywhere.com
+
+''' 
