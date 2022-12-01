@@ -26,3 +26,56 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {})
 # funkcja post_list pobiera(request) i zwraca(return) wartość uzyskaną dzięki wywołaniu innej funkcji (render - funkcja renderuje(składa w całość szablon HTML))
 
+# 14. w katalogu blog tworzymy katalog templates, a w nim kolejny katalog blog --> blog/templates/blog
+# 15. blog/templates/blog tworzymy plik post_list.html 
+# ! - tworzy szablon html w pliku: (uwaga, poniżej używamy języka html)
+'''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">                                                      # kodowanie strony
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>                                                     # tytuł strony
+</head>
+<body>                                                                          # sekcja body - to tu umieścimy elementy naszej strony widoczne na ekranie
+    
+</body>
+</html>
+'''
+
+# zmieniamy nasz szablon
+
+'''
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog dla programistów</title>
+    </head>
+<body>
+    <div>                                                       # znacznik <div> - kontener(pusty nic w naszym widoku nie zmienia). Po dodaniu znaczników CSS (znaczniki arkuszów stylów) możemy na przykład ustawić kolor tekstu w takim kontenerze
+        <h1>Witam na stronie bloga!</h1>                        # znacznik <h1> header(tytuł) (h1 do h4 - od największego do najmniejszego)
+        <h2>Witam na stronie bloga!</h2>    
+        <h3>Witam na stronie bloga!</h3>    
+        <h4>Witam na stronie bloga!</h4>
+    </div>
+    <div>
+        <p>To jest akapit</p>                                   # znacznik <p>  paragraf - możesz później sformatować tekst w nim zawarty (np. czcionkę)
+        <em>To jest wyróżniony tekst</em><br>                   # znacznik <em> wyróżnik - domyślnie to italic(pochylenie tekstu). Możesz ten znacznik stosować wewnątrz tekstu  <br> - enter(przejście do następnego wiersza)
+        <strong>Tu jest pogrubiony tekst</strong><br>           # znacznik <strong>      - pogrubiony tekst
+        <a href="https://strefakursów.pl">strefakursów.pl</a>   # wstawianie linku
+    </div>
+    <div>
+        <ul>
+            <li>Element listy</li>                              # elementy listy <ul> nadrzędny
+            <li>Element listy</li>                                               <li> podrzędny
+            <li>Element listy</li>
+        </ul>
+    </div>
+</body>
+</html>
+'''
+
