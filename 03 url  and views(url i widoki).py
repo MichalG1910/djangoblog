@@ -17,3 +17,12 @@ urlpatterns = [
     path('', views.post_list, name='post_list'), # przyporządkowanie widoku post_list do strony głównej
     # views.post_list zostanie dopasowany do pustego ciągu znaków '', każdy kto wejdzie na 127.0.0.1 trafi na ten widok, name=post_list to nazwa url, która będzie używana do zidentyfikowania widoku
 ]
+
+# 13. /djangoblog/blog  modyfikujemy plik views.py
+
+from django.shortcuts import render
+
+def post_list(request):
+    return render(request, 'blog/post_list.html', {})
+# funkcja post_list pobiera(request) i zwraca(return) wartość uzyskaną dzięki wywołaniu innej funkcji (render - funkcja renderuje(składa w całość szablon HTML))
+
