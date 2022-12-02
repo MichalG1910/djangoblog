@@ -28,7 +28,7 @@ def post_list(request):
 
 # 14. w katalogu blog tworzymy katalog templates, a w nim kolejny katalog blog --> blog/templates/blog
 # 15. blog/templates/blog tworzymy plik post_list.html 
-# ! - tworzy szablon html w pliku: (uwaga, poniżej używamy języka html)
+# wywołanie "!" - tworzy szablon html w pliku: (uwaga, poniżej używamy języka html)
 '''
 <!DOCTYPE html>
 <html lang="en">

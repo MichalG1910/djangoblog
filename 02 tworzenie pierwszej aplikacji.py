@@ -102,3 +102,18 @@ Superuser created successfully.
 6. Reload bioly1910.pythonanywhere.com
 
 ''' 
+
+
+
+####################### interaktywna konsola Django ###################################
+
+# (myvenv) C:\Users\mgrabarz3\pythonMain\Djangoblog>python manage.py shell                (praca) otwieramy konsolę zintegrowaną z naszym środowiskiem wirtualnym
+
+'''
+Import postów z naszego bloga
+
+
+1.  >>> from blog.models import Post
+2.  >>> Post.objects.all()
+    <QuerySet [<Post: 1 post>]>               Wynik: otrzymamy listę wszystkich obiektow w naszym modelu Post (w tym przypadku listę postów)
+'''
