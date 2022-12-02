@@ -105,15 +105,68 @@ Superuser created successfully.
 
 
 
-####################### interaktywna konsola Django ###################################
+####################### interaktywna konsola Django <QuerySet> ###################################
 
 # (myvenv) C:\Users\mgrabarz3\pythonMain\Djangoblog>python manage.py shell                (praca) otwieramy konsolę zintegrowaną z naszym środowiskiem wirtualnym
 
+# WAŻNE po każdym otwarciu konsoli musimy od nowa wykonywać importy, tworzyć zmienne
 '''
-Import postów z naszego bloga
+#1# Import postów z naszego bloga
 
 
 1.  >>> from blog.models import Post
 2.  >>> Post.objects.all()
     <QuerySet [<Post: 1 post>]>               Wynik: otrzymamy listę wszystkich obiektow w naszym modelu Post (w tym przypadku listę postów)
+'''
+
+'''
+#2# Dopisanie posta do naszego bloga
+
+1.  >>> from django.contrib.auth.models import User
+2.  >>> Users.objects.all()
+    <QuerySet [<User: bioly1910>, <User: Adam>]>               Wynik: otrzymamy listę wszystkich użytkowników w modelu User 
+3.  me = User.objects.get(username= 'Adam')                    Przypisujemy zmienną me do naszego użytkownika Adam
+4.  >>> from blog.models import Post
+5.  >>> Post.objects.create(author=me, title='Testowy wpis 2', text='Kolejna zawartość testowego wpisu') # tworzymy post
+<Post: Testowy wpis 2>
+6.  >>> Post.objects.all()
+<QuerySet [<Post: Testowy wpis>, <Post: Testowy wpis 2>]>
+'''
+
+'''
+#3# filtrowanie postów (to samo uruchomienie konsoli co wyżej, mamy już importy i zmienną me)
+
+1.  >>> Post.objects.filter(author=me)                          # filtrujemy po autorze postu
+<QuerySet [<Post: Testowy wpis>, <Post: Testowy wpis 2>]>
+
+2.  >>> Post.objects.filter(title__contains='wpis')             # filtrujemy po tytul zawiera słowo 'wpis'
+<QuerySet [<Post: Testowy wpis>, <Post: Testowy wpis 2>]>
+
+3. >>> from django.utils import timezone
+   >>> Post.objects.filter(publish_date__lte=timezone.now())    # filtrujemy po dacie publikacji(posty tworzone w <QuerySet> jej nie mają, więc ich nie wyświetli)
+<QuerySet [<Post: Wpis z datą publikacji>]>
+
+4.  >>> post = Post.objects.get(title='Testowy wpis')           # pobieramy do zmiennej post wpis o tytule= 'Testowy Wpis' (nie ma on publish_date)
+>>> post.publish()                                              # publikujemy go
+>>> Post.objects.filter(publish_date__lte=timezone.now())
+<QuerySet [<Post: Testowy wpis>, <Post: Wpis z datą publikacji>]> # jak widać teraz filtracja po dacie publikacji zwraca nam 2 posty
+
+'''
+
+'''
+#4# sortowanie postów 
+
+>>> Post.objects.order_by('created_date')                                                 # sortujemy po dacie utworzenia 
+<QuerySet [<Post: Testowy wpis>, <Post: Testowy wpis 2>, <Post: Wpis z datą publikacji>]>
+>>> Post.objects.order_by('-created_date')                                                # odwrotne sortowanie
+<QuerySet [<Post: Wpis z datą publikacji>, <Post: Testowy wpis 2>, <Post: Testowy wpis>]>
+'''
+
+'''
+#5# łączenie QuerySetów
+
+>>> Post.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date')
+<QuerySet [<Post: Wpis z datą publikacji>, <Post: Testowy wpis>]>
+>>> Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
+<QuerySet [<Post: Testowy wpis>, <Post: Wpis z datą publikacji>]>
 '''
