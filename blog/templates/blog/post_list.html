@@ -13,18 +13,20 @@
         <h3>Autor: Michał</h3>    
         <h4>wszelkie prawa zastrzeżone</h4> 
     </div>
+    {% comment "Komentarz- w cudzysłowiu tytuł komentarza"%}
+    Wszystko, co się znajdzie między początkiem i końcem
+    komentarza, nie bedzie wykonywane przez django
+    {% endcomment %}
+    
+    {% for post in posts %} 
     <div>
-        <p>To jest akapit</p>  
-        <em>To jest wyróżniony tekst</em><br>
-        <strong>Tu jest pogrubiony tekst</strong><br>
-        <a href="https://strefakursów.pl">strefakursów.pl</a> 
+        <p>opublikowany: {{ post.publish_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2> 
+        <em>{{ post.text|linebreaksbr }}</em>
     </div>
-    </div>
-        <ul>
-            <li>Element listy</li>
-            <li>Element listy</li>
-            <li>Element listy</li>
-        </ul>
+    {% endfor %}
+    <div>
+        
     </div>
 </body>
 </html>
