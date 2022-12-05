@@ -79,3 +79,50 @@ def post_list(request):
 </html>
 '''
 
+# 16. wprowadzamy dane dynamiczne do naszych widoków
+#     /djangoblog/blog  modyfikujemy plik views.py
+
+from django.shortcuts import render
+from .models import Post # . przed models oznacza, że odnosimy się do pliku models z bieżącego katalogu
+from django.utils import timezone
+
+def post_list(request):
+    posts = Post.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date') # tworzymy zmienną posts, która będzie zawierała posty posegregowane według daty publikacji
+    return render(request, 'blog/post_list.html', {'posts': posts}) # uzupełniliśmy {}
+
+# 17. blog/templates/blog tmodyfikujemy plik post_list.html ()
+
+'''
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog dla programistów</title>
+    </head>
+<body>
+    <div>   
+        <h1>Witam na stronie bloga!</h1>    
+        <h2>Blog o programowaniu</h2>    
+        <h3>Autor: Michał</h3>    
+        <h4>wszelkie prawa zastrzeżone</h4> 
+    </div>
+    {% comment "Komentarz- w cudzysłowiu tytuł komentarza"%} # początek komentarza- to też jest wyrażenie
+    Wszystko, co się znajdzie między początkiem i końcem
+    komentarza, nie bedzie wykonywane przez django
+    {% endcomment %}                                         # koniec komentarza
+
+    {% for post in posts %}                             # zapytanie które będzie wyrażeniem z pętlą for iterującą naszą zmienną posts(utworzoną w blog/vievs.py - patrz pkt. 16 tej instrukcji)
+    <div>
+        <p>opublikowany: {{ post.publish_date }}</p>    # paragraf odwołujący się do zmiennej post (utworzonej przez iteracje zmiennej posts - patrz wyżej)
+        <h2><a href="">{{ post.title }}</a></h2>        # odnośnik(link) do naszego pojedyńczego posta
+        <em>{{ post.text|linebreaksbr }}</em>           # tekst naszego posta |linebreaksbr - filtr zamiana znaczników nowej linii na akapity
+    </div>
+    {% endfor %}                                        # zakończenie pętli for
+    <div>
+        
+    </div>
+</body>
+</html>
+'''
