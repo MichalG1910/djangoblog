@@ -18,15 +18,15 @@ mysite/wsgi.py:                         Punkt wejściowy dla serwerów WWW kompa
                                         Jak wdrażać z WSGI dla większej ilości szczegółów.
 '''
 
-'''
-modyfikacja /settings.py
 
+# modyfikacja /settings.py
+'''
 TIME_ZONE = 'Europe/Warsaw'                           # strefa czasowa
 LANGUAGE_CODE = 'pl-pl'                               # język
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')        # dodajemy pod STATIC_URL # ścieżkę do plików statycznych (nie będziemy musielipodawać ścieżki bezwzględnej, tylko zaczynamy od naszej ścieżki BASE_DIR)
-STATIC_ROOT = BASE_DIR / 'static'                     # dla wersji django 4.1 
+STATIC_ROOT = BASE_DIR / 'static/'                     # dla wersji django 4.1 
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']  # potrzebne do przepuszczania hostów do pracy z Django,  
                                                       # 127.0.0.1 - local host,  .pythonanywhere.com - chmura pythonowa
