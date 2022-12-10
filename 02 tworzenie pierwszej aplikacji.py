@@ -102,6 +102,22 @@ Superuser created successfully.
 6. Reload bioly1910.pythonanywhere.com
 
 ''' 
+# aktualizacja plików statycznych w chmurze
+#    otwierasz bash console i wpisujesz:
+'''
+12:34 ~ $ workon bioly1910.pythonanywhere.com
+(bioly1910.pythonanywhere.com) 12:35 ~ $ cd bioly1910.pythonanywhere.om
+(bioly1910.pythonanywhere.com) 12:36 ~/bioly1910.pythonanywhere.com (main)$ python manage.py collectstatic
+You have requested to collect static files at the destination
+location as specified in your settings:
+    /home/bioly1910/bioly1910.pythonanywhere.com/static
+This will overwrite existing files!
+Are you sure you want to do this?
+Type 'yes' to continue, or 'no' to cancel: yes
+2 static files copied to '/home/bioly1910/bioly1910.pythonanywhere.com/static', 128 unmodified.
+(bioly1910.pythonanywhere.com) 12:37 ~/bioly1910.pythonanywhere.com (main)$ git pull
+
+'''
 
 
 
