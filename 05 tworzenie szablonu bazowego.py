@@ -23,8 +23,8 @@
 <div class="content container">
     <div class="row">
         <div class="col-md-8">
-            {% bolck content %}                                 w to miejsce
-            {% endblock %}                                      wstawimy nasz zmodyfikowany plik post_list
+            {% bolck content %}                                 w to miejsce zostanie wstawiony
+            {% endblock %}                                      nasz zmodyfikowany plik post_list
         </div>
     </div>
 </div>
@@ -35,5 +35,17 @@
 # 6. Modyfikujemy plik post_list.html do takiej postaci:
 
 '''
-
+{% extends 'blog/base.html' %}                                  zzapytanie django uruchamiające podstawienie post_list.html do szablony bazowego base.html
+    
+    {% block content %}
+        {% for post in posts %}
+        <div class="post">
+            <div class="data">
+                <p>opublikowany: {{ post.publish_date }}</p>
+            </div>
+            <h2><a href="">{{ post.title }}</a></h2> 
+            <em>{{ post.text|linebreaksbr }}</em>
+        </div>
+        {% endfor %}
+    {% endblock %}
 '''
