@@ -96,14 +96,23 @@ image = models.ImageField(null=True, blank=True, upload_to='images/')       # do
 '''
 
 # 7. modyfikujemy plik blog/templates/blog/post_list.html
-# nasza miniaturka obrazka zostanie wyświetlona pod postem
+#       nasza miniaturka obrazka zostanie wyświetlona pod postem
 '''
 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2> 
     <img src="{{ post.image.url }}" alt="Obrazek" width="100px">                        dodano
 <em>{{ post.text|linebreaksbr }}</em>
 '''
+# 7a. zmiana powyżej działała niepoprawnie. Jeśli choćby 1 post nie miał obrazka, wyrzucało błąd servera 500
+#       Zmodyfikowałem dodając instrukcję warunkową:
+
+'''
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="Obrazek" width="100px">
+{% endif %}
+'''
 
 # 8. modyfikujemy plik blog/templates/blog/post_detail.html
+#       Działało niepoprawnie, aby naprawić patrz punkt wyżej (7a)
 
 '''
 <h2>{{ post.title }}</h2>
