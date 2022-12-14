@@ -106,7 +106,7 @@ Superuser created successfully.
 #    otwierasz bash console i wpisujesz:
 '''
 12:34 ~ $ workon bioly1910.pythonanywhere.com
-(bioly1910.pythonanywhere.com) 12:35 ~ $ cd bioly1910.pythonanywhere.om
+(bioly1910.pythonanywhere.com) 12:35 ~ $ cd bioly1910.pythonanywhere.com
 (bioly1910.pythonanywhere.com) 12:36 ~/bioly1910.pythonanywhere.com (main)$ python manage.py collectstatic
 You have requested to collect static files at the destination
 location as specified in your settings:
