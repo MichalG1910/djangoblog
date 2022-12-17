@@ -36,3 +36,19 @@ def post_edit(request,pk):
         form = PostForm(instance=post)   
     return render(request, 'blog/post_edit.html', {'form': form})
 '''
+
+# 5. wpisujemy instrukcję warunową if w pliku blog/templates/blog/base.html
+#       instrukcja ta w←świetli nasz "+" odpowiedzialny za dodanie posta tylko wtedy, kiedy użytkownik będzie zalogowany
+
+'''
+{% if user.is_authenticated %}  
+<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+'''
+#       to samo robimy z blog/templates/blog/post_detail.html
+#       (wyświetlany ołówek do edycji posta)
+'''
+{% if user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endif %}
+'''
