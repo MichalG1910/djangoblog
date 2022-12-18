@@ -8,7 +8,7 @@
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2> 
             {% if post.image %}
-                <img src="{{ post.image.url }}" alt="Obrazek" width="100px">
+            <a href="{% url 'image_fullscreen' pk=post.pk %}"><img src="{{ post.image.url }}" alt="Obrazek" width="200px"></a>
             {% endif %}
             <em>{{ post.text|linebreaksbr }}</em>
         </div>
