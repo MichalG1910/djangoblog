@@ -1,4 +1,4 @@
-# 11. /djangoblog  -  modyfikujemy plik urls.py
+# 11. modyfikujemy plik mysite/urls.py
 
 from django.contrib import admin
 from django.urls import path, include # dodajemy include
@@ -8,7 +8,7 @@ urlpatterns = [
     # path(r'^admin/(/d+)$', admin.site.urls) # tzw regex (jest to zapis url z wyrażeniami regularnymi(możemy dzięki niemu np. rozróżniać posty przez dodanie cyfry do każdego z nich)). Jest to metoda przestarzała, rzadko już spotykana
     path('',include('blog.urls')) # dodajemy #''- pusty zapis powoduje, że gdy wpiszemy adres url(np. naszej strony 127.0.0.1:8000), to include podłączy do niego plik blog.urls
 ]
-# 12. /djangoblog/blog tworzymy plik urls.py
+# 12. tworzymy plik blog/urls.py
 
 from django.urls import path
 from . import views # wszystkie widoki (które utworzymy) z aplikacji blog zostaną zaimportowane
@@ -18,7 +18,7 @@ urlpatterns = [
     # views.post_list zostanie dopasowany do pustego ciągu znaków '', każdy kto wejdzie na 127.0.0.1 trafi na ten widok, name=post_list to nazwa url, która będzie używana do zidentyfikowania widoku
 ]
 
-# 13. /djangoblog/blog  modyfikujemy plik views.py
+# 13. modyfikujemy plik blog/views.py
 
 from django.shortcuts import render
 
@@ -80,7 +80,7 @@ def post_list(request):
 '''
 
 # 16. wprowadzamy dane dynamiczne do naszych widoków
-#     /djangoblog/blog  modyfikujemy plik views.py
+#     modyfikujemy plik blog/views.py
 
 from django.shortcuts import render
 from .models import Post # . przed models oznacza, że odnosimy się do pliku models z bieżącego katalogu
@@ -90,7 +90,7 @@ def post_list(request):
     posts = Post.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date') # tworzymy zmienną posts, która będzie zawierała posty posegregowane według daty publikacji
     return render(request, 'blog/post_list.html', {'posts': posts}) # uzupełniliśmy {}
 
-# 17. blog/templates/blog tmodyfikujemy plik post_list.html ()
+# 17. modyfikujemy plik blog/templates/blog/post_list.html ()
 
 '''
 <!DOCTYPE html>
