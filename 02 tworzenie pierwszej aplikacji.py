@@ -117,6 +117,8 @@ Type 'yes' to continue, or 'no' to cancel: yes
 2 static files copied to '/home/bioly1910/bioly1910.pythonanywhere.com/static', 128 unmodified.
 (bioly1910.pythonanywhere.com) 12:37 ~/bioly1910.pythonanywhere.com (main)$ git pull
 
+Czasami w bashconsole nie działa. Można zrobić to ręcznie na stronie swojego projektu pythonanywhere.com (szukasz pliku i podmieniasz ręcznie)
+Zawsze po podmianie plików statycznych (np. blog.css) odświeżasz strone [CTRL + F5]
 '''
 
 
