@@ -1,0 +1,284 @@
+/* opis pliku css (ostateczne zmiany)*/
+.page-header {                          /* klasa stylu headera(nazwy klasy używamy w pliku html)*/
+    background-color: #ffffff;        /* kolor tła (biały)*/
+    margin-top: 5px;                    /* marginesy 5 pikseli */
+    padding: 10px 50px 0px 0px;         /* paddingi lewy, prawy, gora, dół */
+    color: #C25100;                   /* kolor główny */
+    font-family: 'Inter', sans-serif;   /* czcionka tekstu */
+    text-decoration: none;              /* dekoracje czcionki(brak) */
+    width:70%;                          /* header ma 70 % szerokości ekranu */
+    border-style: hidden;               /* ukryte wszelkie ramki */
+}
+
+.text-justify{                          /* nowa klasa stylu */
+margin-right: 55px;                     /* prawy margines 55 pikseli */
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #C25100;                   /* kolor dla headera(tytułu) h1 */
+}
+.gora{                                  /* klasa odpowiada za górną część naszej strony */
+  width:70%;                            /* szerokość 70% */
+  border-bottom: solid;                 /* ramka na dole */
+  border-width: 1px;                    /* szerokośc ramki 1 piksel */
+  border-color:#f0f0f0;               /* kolor ramki */
+}
+
+.baner{                                 /* klasa dla zdjęcia na stronie głównej */
+width: 100%;                            /* szerokośc 100%(kontenera, w którym się znajduje) */
+border-radius: 10px;                    /* zaokrąglenie rogów */
+border-bottom:solid;                    /* ramka dolna */
+border-left:solid;                      /* ramka lewa (razem z dolną ramką stwarzają wrażenie 3d banera */
+}
+
+.content {
+  margin: auto;                         /* marginesy auto */
+  width: 100%;                          /* szerokość 100% */
+}
+
+.img {                                  /* klasa dla zdjęć */
+    margin: 25px;
+    float: left;                        /* wyrównanie obrazu do lewej strony */
+    border-radius: 10px;
+}
+
+.data {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: left;
+    font-size: 10pt;                    /* rozmiar czcionki 10 punktów */
+    margin-left: 20px;
+    margin-top: 4px;                    /* margines góra */
+    padding: 10px 0;
+}
+
+.plus{                                  /* klas dla plusa(dodawanie postów) */
+    float: right;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 1px;
+}
+
+.post h2 a, .post h1 a:visited {
+    color: #061A40;
+}
+
+.nav-link{                              /* klasa obsługująca nawigację na stronie (menu 1 - zawartość)*/
+    padding: 0px 0px 0px 78px;
+    color: #061A40;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+h2{
+    font-family: 'Inter', sans-serif;
+}
+
+.all{                                   /* klasa dla całej strony */
+    margin: auto;
+    width: 80%;
+    padding-left: 220px;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-link2{                             /* klasa obsługująca nawigację na stronie (menu 2 - media społ.)*/
+    padding: 0px 70px 0px 11px;
+    color: #C25100;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    text-decoration: none; 
+}
+.title{                                 /* klasa dla tytułu (blog dla programistów) */
+    font-size: 45px;
+}
+
+.stopka{                                /* klasa odpowiedzialna za dolną część strony */
+    margin-top: 35px;
+    width: 100%;
+    padding: 10px;
+    background-color: #061A40;
+}
+
+.site-footer{                           /* klasa sekcji .stopki - odstępy i czcionka */
+    padding: 45px 0 20px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.site-footer hr{                        /* klasa sekcji .stopki -  */
+    border-top-color: #bbb;
+    opacity: 0.5;                       /* opacity - z ang. nieprzezroczystość, ciemność */
+}
+
+.site-footer hr.small
+{
+  margin:20px 0;
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px;
+}
+.site-footer a                        /* klasa dla sekcji ancor */
+{
+  color:#ffffff;;
+}
+.site-footer a:hover                  /* klasa dla sekcji ancor odwiedzony */
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none;
+}
+.footer-links li
+{
+  display:block;
+}
+.footer-links a
+{
+  color:#ffffff;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block;
+}
+.site-footer .social-icons
+{
+  text-align:right;                    /* wyrównanie tekstu do prawej */
+}
+.site-footer .social-icons a           /* klasa obiektu graficznego stworzonego w całości w css */
+{                                      /* będzie to małe kółko, w którym będą umieszczone loga socialmediów */
+  width:40px;                     
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:2px;
+  border-radius:100%;
+  background-color:#33353d;
+}
+.copyright-text
+{
+  margin:0;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px;
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0;
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center;
+
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px;
+
+}
+
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px;
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:13px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe;
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:30px;
+  width:34px;
+  font-size:12px;
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998;
+
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced;
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6;
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89;
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600;
+  }
+}
+i{
+margin-top: 8px;
+}
