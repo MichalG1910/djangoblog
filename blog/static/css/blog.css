@@ -255,10 +255,15 @@ i{
 margin-top: 8px;
 }
 
-.img-fullscreen {
+.fullscreenViev {
   margin-left: 30px;
   color: #ffffff; 
   font-family: 'Inter', sans-serif;
   text-decoration: none; 
 }
-
+.padding-fullscreenViev {
+  padding: 10px 10px 10px 10px
+}
+.imagefsv {
+border-radius: 10px;
+}
