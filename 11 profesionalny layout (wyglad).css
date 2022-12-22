@@ -208,7 +208,7 @@ h2 {
   font-weight:700;
   font-size:13px;
 }
-.social-icons a {
+.social-icons a {                           /* klasa odpowiedzialna za wykreślenie kółka w którym są loga firm */
   background-color:#eceeef;
   color:#818a91;
   font-size:13px;
@@ -233,7 +233,7 @@ h2 {
   width:34px;
   font-size:12px;
 }
-.social-icons a.facebook:hover {
+.social-icons a.facebook:hover {          /* klasa wyświetlająca logo facebook w kółku */
   background-color:#3b5998;
 }
 .social-icons a.twitter:hover {
@@ -245,6 +245,9 @@ h2 {
 .social-icons a.dribbble:hover {
   background-color:#ea4c89;
 }
+.social-icons a.youtube:hover {
+  background-color:#c70b0b;             /* moja wstawka */
+}
 @media (max-width:767px) {
   .social-icons li.title {
     display:block;
@@ -255,7 +258,17 @@ h2 {
 i{
 margin-top: 8px;
 }
-.img-fullscreen {
+
+/* dodane przeze mnie */
+.fullscreenViev {                         /* klasa nagłowka  (dodatek do navbar navbar-light) */      
+  margin-left: 30px;
   color: #ffffff; 
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif;
+  text-decoration: none; 
+}
+.padding-fullscreenViev {                 /* klasa całości- dodaje padding - biała ramka całego widoku */
+  padding: 10px 10px 10px 10px
+}
+.imagefsv {
+border-radius: 10px;                      /* klasa dla obrazu - zaokrągla narożniki obrazka */
 }
