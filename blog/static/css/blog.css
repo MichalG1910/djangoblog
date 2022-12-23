@@ -41,6 +41,11 @@ border-left:solid;
     float: left;
     border-radius: 10px;
 }
+.vid {
+    margin: 25px;
+    margin-left: 0px;
+    float: left;
+}
 
 .data {
     color: #828282;
