@@ -248,6 +248,9 @@ h2 {
 .social-icons a.youtube:hover {
   background-color:#c70b0b;
 }
+.social-icons a.pinterest:hover {
+  background-color:#eb2121;
+}
 @media (max-width:767px) {
   .social-icons li.title {
     display:block;
