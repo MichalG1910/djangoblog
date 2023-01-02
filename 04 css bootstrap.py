@@ -1,6 +1,6 @@
 '''css - kaskadowe arkusze stylów'''
 # 18. wchodzimy na stroę getbootstrap.com
-#     w pliku post_list.html w kontenerze <head> wklejamy połączenie do css bootstrap <!-- CSS only -->
+#     w pliku post_list.html w kontenerze <head> wklejamy ze strony getbootstrap.com połączenie do css bootstrap <!-- CSS only -->
 # <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 '''
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ h1 a, h2 a{                     ten zapis tworzy połączenie między naszymi zn
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">              
     </head>
 '''
-# może dojść do sytuacji, że ładoowanie naszego css nie zadziała, wtedy:
+# może dojść do sytuacji, że ładoowanie naszego css nie zadziała, wtedy usuwamy <!DOCTYPE html>:
 '''
 
 {% load static %}                                   odpowiada on za ładowanie plików statycznych tj: /djangoblog/blog/static/css/blog.css
