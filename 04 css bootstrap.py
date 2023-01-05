@@ -73,10 +73,10 @@ body {                                          wszytko co znjduje się w konten
     padding-left:15px;
     font-family: 'Lato', sans-serif;            zmieniamy czcionkę (użyłem strony: https://fonts.google.com/). Można też skopiować link i wkleić go w pliku post_list w sekcji <head> : <link rel="preconnect"href="https://fonts.googleapis.com">
                                                                                                                                                                                         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                                                                                                                                                            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">                                                                                                                                                                                                
+                                                                                                                                                                                        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">                                                                                                                                                                                                
 }
 ''' 
-# 23. tworzymy i wykorzystujemy nazwy KLAS w naszych kontenerach
+# 23. tworzymy i wykorzystujemy nazwy KLAS w naszych kontenerach w pliku html
 
 '''
 <div class="page-header">                                                     utworzono nazwę klasy
