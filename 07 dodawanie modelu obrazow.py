@@ -69,7 +69,8 @@ from .models import Post
 class ImgForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['image']
+        fields = ['image']      w tej zmiennej zawarte są pola, jakie będą wyświetlane w widoku dodania nowego postu
+
 '''
 
 # 5. modyfikujemy plik blog/models.py
