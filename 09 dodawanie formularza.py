@@ -32,7 +32,7 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 '''
 
-# 4. w katalogu blog/templates/blog tworzymy plik post_edit.html
+# 5. w katalogu blog/templates/blog tworzymy plik post_edit.html
 #       uwaga! w tutorialu nie było enctype="multipart/form-data" w linii 42 (form method). Nie dało się dodawać z naszego formularza zdjęć, tylko sam tekst. 
 '''
 {% extends 'blog/base.html' %}                                                              podłączenie naszego szablonu base.html
@@ -45,7 +45,7 @@ def post_new(request):
 </form>
 {%  endblock %}
 '''
-# 4. modyfikujemy funkcję post_new w pliku blog/views.py
+# 6. modyfikujemy funkcję post_new w pliku blog/views.py
 #       oraz dodajemy import funkcji redirect
 #       uwaga, w tutorialu nie było request.FILES w linii 56(form = form = PostForm(request.POST, request.FILES). Nie dało się dodawać z naszego formularza zdjęć, tylko sam tekst.
 '''

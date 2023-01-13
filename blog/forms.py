@@ -10,5 +10,3 @@ class PostForm(forms.ModelForm):
         fields = ['title', 'text', 'image', 'url']      #w tej zmiennej zawarte są pola, jakie będą wyświetlane w widoku dodania nowego postu
 
 
-
-        

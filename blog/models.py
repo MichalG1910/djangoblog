@@ -10,7 +10,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)         # pole z wczytaną aktualną datą i godziną 
     publish_date = models.DateTimeField(blank=True, null=True)        # data publikacji (może byc pusta, wtedy np. artykuł będzie czekał na publikację)
     image = models.ImageField(null=True, blank=True, upload_to='images/') # dodane zdjęcie (null=True - może to być 0, blank=True - może być puste, upload_to - gdzie ma być obraz zapisany)
-    url = EmbedVideoField(null=True, blank=True)
+    url = EmbedVideoField(null=True, blank=True)                      # pole do wpisania naszeo adresu url do video
     def publish(self):                                                # funkcja do publikacji artykułu
         self.publish_date = timezone.now()                            # zrobi to tylko wtedy gdy self.publish_date = timezone.now()
         self.save()                                                   # zapisanie artykulu
