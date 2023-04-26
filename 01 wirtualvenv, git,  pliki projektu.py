@@ -94,11 +94,17 @@ windows - można ściągnąc bezpośrednio ze strony lub zainstalować przez vis
 linux-  & sudo apt install git
 
 git init  							                        -  inicjalizacja nowego (pustego) repezytorium		Zainicjowano puste repozytorium Gita w /home/micha/venv/.git/
-git status 							                        -  taka jakby historia gita
+git status 							                        -  taka jakby historia  (śledzonego pliku)
 git add --all  							                    -  dodanie plików do repezytorium
 git config --global user.email "grabarzmichal@gmail.com"   	-  ustalenie adresu email dla konta na github
 git config --global user.name "Michał Grabarz"			    -  nazwa użytkownika github
 git commit -m "Pierwszy zrzut plików"  				        -  komentarz do zrzutu plików. Po poprawnym wykonaniu otrzymamy inf. jak niżej:
+git rm "ścieżka do pliku/katalogu"                          -  usunięcie pliku/katalogu z gita
+git mv "nazwa pliku 1" "nazwa pliku 2"                      -  zmiana nazwy pliku
+git log                                                     -  lista zmian, jakie zaszły w rep od najnowszego do najstarszego
+git commit --amend                                          -  poprawienie wcześniejszego commita
+git reset HEAD "nazw pliku"                                 -  usunięcie pliku z poczekalni
+git checkout --"nazwa pliku"                                -  cofnięcie wszystkich modyfikacji pliku do stanu po ostatnim commit
 
 [master (zapis-korzeń) dc0ec99] Pierwszy zrzut plików
  17 files changed, 429 insertions(+)
