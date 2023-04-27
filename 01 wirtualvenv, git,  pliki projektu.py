@@ -115,6 +115,16 @@ git tag "nazwa etykiety"                                    -  tworzenie etykiet
 git tag -a "nazwa eykiety"                                  -  tworzenie etykiety opisanej (zawiera dane: osoba, adres e-mail, kiedy)
 git push "nazwa rep" "nazwa etykiety taga"                  -  polecenie git push domyślnie nie wysyła tagów do repezytorium (aby to zrobić użuj tego polecenia)
 git push "nazwa rep" --tags                                 -  wysyła wszystkie tagi na serwer
+git branch                                                  -  wyświetli listę wszystkich gałęzi
+git branch "nowa gałąź"                                     -  tworzenie nowej gałęzi (zawsze tworzymy z innej np. gałężi, mastera)
+git checkout "now gałąź"                                    -  przełączenie na inną gałąź
+git merge "nazwa głęzi"                                     -  scalanie 2 gałęzi ze sobą - gałąź , której nazwę wpiszemy scali z gałęzią, na którą wskazuje HEAD
+git branch -d "nzwa gałęzi"                                 -  usuwanie gałęzi
+
+master - trzpień naszego drzewa
+HEAD - wskazuje na której gałęzi aktualnie jestesmy
+branch - gałąź
+
 
 [master (zapis-korzeń) dc0ec99] Pierwszy zrzut plików
  17 files changed, 429 insertions(+)
