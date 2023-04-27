@@ -99,12 +99,22 @@ git add --all  							                    -  dodanie plików do repezytorium
 git config --global user.email "grabarzmichal@gmail.com"   	-  ustalenie adresu email dla konta na github
 git config --global user.name "Michał Grabarz"			    -  nazwa użytkownika github
 git commit -m "Pierwszy zrzut plików"  				        -  komentarz do zrzutu plików. Po poprawnym wykonaniu otrzymamy inf. jak niżej:
-git rm "ścieżka do pliku/katalogu"                          -  usunięcie pliku/katalogu z gita
+git rm "ścieżka do pliku/katalogu"/"nazwa rep."             -  usunięcie pliku/katalogu z gita/ usunięcie rep
 git mv "nazwa pliku 1" "nazwa pliku 2"                      -  zmiana nazwy pliku
 git log                                                     -  lista zmian, jakie zaszły w rep od najnowszego do najstarszego
 git commit --amend                                          -  poprawienie wcześniejszego commita
 git reset HEAD "nazw pliku"                                 -  usunięcie pliku z poczekalni
 git checkout --"nazwa pliku"                                -  cofnięcie wszystkich modyfikacji pliku do stanu po ostatnim commit
+git fetch                                                   -  updatuje naszą kopię repezytorium do tej na github, nie powoduje konfliktów scalania (merge conflikt)
+git pull                                                    -  updatuje zarowno wersje rep. na github, jak i kopie na naszym komputerze (może powodować merge conflict)(oddziałuwuje na head, branch)                                         
+git push "nazwa rep" "nazwa galezi"                         -  wysyłanie zmian na serwr github
+git remote show "nazwa rep"                                 -  informacje o repezytorium
+git rename "nazwa" "nowa nazwa"                             -  zmiana nazwy rep.
+git tag                                                     -  wyświetlenie historii tagów
+git tag "nazwa etykiety"                                    -  tworzenie etykiety lekkiej. etykietowanie miejsc w historii
+git tag -a "nazwa eykiety"                                  -  tworzenie etykiety opisanej (zawiera dane: osoba, adres e-mail, kiedy)
+git push "nazwa rep" "nazwa etykiety taga"                  -  polecenie git push domyślnie nie wysyła tagów do repezytorium (aby to zrobić użuj tego polecenia)
+git push "nazwa rep" --tags                                 -  wysyła wszystkie tagi na serwer
 
 [master (zapis-korzeń) dc0ec99] Pierwszy zrzut plików
  17 files changed, 429 insertions(+)
