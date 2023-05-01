@@ -120,9 +120,14 @@ git branch "nowa gałąź"                                     -  tworzenie nowe
 git checkout "now gałąź"                                    -  przełączenie na inną gałąź
 git merge "nazwa głęzi"                                     -  scalanie 2 gałęzi ze sobą - gałąź , której nazwę wpiszemy scali z gałęzią, na którą wskazuje HEAD
 git branch -d "nzwa gałęzi"                                 -  usuwanie gałęzi
+git fetch origin                                            -  synchronizuje dane na serwerze lokalnym w momencie, kiedy są one starsze niż na github serwerze
+git push "nazwa zdalnego repozytorium" "nazwa gałęzi"       -  wypychanie zmian z lokalnej głęzi do gałęzi zdalnej na serwerze github
+git clone --bare "nazwa rep" "nazwa rep".git                -  tak też można stworzyć czyste repozytorium (jest ono bez katalogu roboczego)
+
+
 
 master - trzpień naszego drzewa
-HEAD - wskazuje na której gałęzi aktualnie jestesmy
+HEAD - wskazuje na której gałęzi aktualnie jestesmy(znacznik)
 branch - gałąź
 
 
