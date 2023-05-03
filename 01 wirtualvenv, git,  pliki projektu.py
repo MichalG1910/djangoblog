@@ -123,11 +123,13 @@ git branch -d "nzwa gałęzi"                                 -  usuwanie gałę
 git fetch origin                                            -  synchronizuje dane na serwerze lokalnym w momencie, kiedy są one starsze niż na github serwerze
 git push "nazwa zdalnego repozytorium" "nazwa gałęzi"       -  wypychanie zmian z lokalnej głęzi do gałęzi zdalnej na serwerze github
 git clone --bare "nazwa rep" "nazwa rep".git                -  tak też można stworzyć czyste repozytorium (jest ono bez katalogu roboczego)
-
-
+git stash                                                   -  dodanie zmian do schowka (bez wysyłania commita) - przydaje się kiedy zmiany nie nadaja sie jeszcze do pusha, jednak czsowo musimy zakonczyć prace z nimi
+git stash apply                                             -  wczytanie ponowne zmian ze schowka (w celu dokończenia pracy z nimi)
+git stash --all                                             -  usunięcie z katalogu roboczego wszystkich plików (i jednoczesnie zpisanie ich w schowku)
+git clean                                                   -  usunięcie wszystkich plików, które nie są śledzone (trwałe usunięcie)
 
 master - trzpień naszego drzewa
-HEAD - wskazuje na której gałęzi aktualnie jestesmy(znacznik)
+HEAD - wskazuje na której gałęzi aktualnie jestesmy(znacznikn najczęściej Master)
 branch - gałąź
 
 
