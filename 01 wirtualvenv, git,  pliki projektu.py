@@ -128,6 +128,13 @@ git stash apply                                             -  wczytanie ponowne
 git stash --all                                             -  usunięcie z katalogu roboczego wszystkich plików (i jednoczesnie zpisanie ich w schowku)
 git clean                                                   -  usunięcie wszystkich plików, które nie są śledzone (trwałe usunięcie)
 
+linki (git w pigułce, sciągi):
+https://training.github.com/downloads/pl/github-git-cheat-sheet/        pl
+https://epicdigitalguy.com/blog/2020/08/10/git-cookbook-git-poradnik/   pl
+https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet        eng
+https://education.github.com/git-cheat-sheet-education.pdf              eng
+
+
 master - trzpień naszego drzewa
 HEAD - wskazuje na której gałęzi aktualnie jestesmy(znacznikn najczęściej Master)
 branch - gałąź
