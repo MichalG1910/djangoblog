@@ -99,15 +99,27 @@ git add --all  							                    -  dodanie plików do repezytorium
 git config --global user.email "grabarzmichal@gmail.com"   	-  ustalenie adresu email dla konta na github
 git config --global user.name "Michał Grabarz"			    -  nazwa użytkownika github
 git commit -m "Pierwszy zrzut plików"  				        -  komentarz do zrzutu plików. Po poprawnym wykonaniu otrzymamy inf. jak niżej:
+
+git pull                                                    -  pobiera dane z serwera na bazie którego oryginalnie stworzyłeś swoje repozytorium i próbuje automatycznie scalić zmiany z kodem roboczym nad którym aktualnie, lokalnie pracujesz.
+git pull                                                    -  updatuje zarowno wersje rep. na github, jak i kopie na naszym komputerze (może powodować merge conflict)(oddziałuwuje na head, branch)
+git commit                                                  -  tworzy migawkę z plików znajdujących się w poczekalni
+git push "nazwa rep" "nazwa galezi"                         -  wysyłanie zmian na serwr github
+git branch                                                  -  wyświetli listę wszystkich gałęzi
+git branch "nowa gałąź"                                     -  tworzenie nowej gałęzi (zawsze tworzymy z innej np. gałężi, mastera)
+git checkout "nowa gałąź"                                    -  przełączenie na inną gałąź
+git merge "nazwa głęzi"                                     -  scalanie 2 gałęzi ze sobą - gałąź , której nazwę wpiszemy scali z gałęzią, na którą wskazuje HEAD
+git fetch                                                   -  updatuje naszą kopię repezytorium do tej na github, nie powoduje konfliktów scalania (merge conflikt)
+git fetch origin                                            -  synchronizuje dane na serwerze lokalnym w momencie, kiedy są one starsze niż na github serwerze
+git stash                                                   -  dodanie zmian do schowka (bez wysyłania commita) - przydaje się kiedy zmiany nie nadaja sie jeszcze do pusha, jednak czsowo musimy zakonczyć prace z nimi
+git stash apply                                             -  wczytanie ponowne zmian ze schowka (w celu dokończenia pracy z nimi)
+
+git branch -d "nzwa gałęzi"                                 -  usuwanie gałęzi
 git rm "ścieżka do pliku/katalogu"/"nazwa rep."             -  usunięcie pliku/katalogu z gita/ usunięcie rep
 git mv "nazwa pliku 1" "nazwa pliku 2"                      -  zmiana nazwy pliku
 git log                                                     -  lista zmian, jakie zaszły w rep od najnowszego do najstarszego
 git commit --amend                                          -  poprawienie wcześniejszego commita
 git reset HEAD "nazw pliku"                                 -  usunięcie pliku z poczekalni
 git checkout --"nazwa pliku"                                -  cofnięcie wszystkich modyfikacji pliku do stanu po ostatnim commit
-git fetch                                                   -  updatuje naszą kopię repezytorium do tej na github, nie powoduje konfliktów scalania (merge conflikt)
-git pull                                                    -  updatuje zarowno wersje rep. na github, jak i kopie na naszym komputerze (może powodować merge conflict)(oddziałuwuje na head, branch)                                         
-git push "nazwa rep" "nazwa galezi"                         -  wysyłanie zmian na serwr github
 git remote show "nazwa rep"                                 -  informacje o repezytorium
 git rename "nazwa" "nowa nazwa"                             -  zmiana nazwy rep.
 git tag                                                     -  wyświetlenie historii tagów
@@ -115,22 +127,16 @@ git tag "nazwa etykiety"                                    -  tworzenie etykiet
 git tag -a "nazwa eykiety"                                  -  tworzenie etykiety opisanej (zawiera dane: osoba, adres e-mail, kiedy)
 git push "nazwa rep" "nazwa etykiety taga"                  -  polecenie git push domyślnie nie wysyła tagów do repezytorium (aby to zrobić użuj tego polecenia)
 git push "nazwa rep" --tags                                 -  wysyła wszystkie tagi na serwer
-git branch                                                  -  wyświetli listę wszystkich gałęzi
-git branch "nowa gałąź"                                     -  tworzenie nowej gałęzi (zawsze tworzymy z innej np. gałężi, mastera)
-git checkout "now gałąź"                                    -  przełączenie na inną gałąź
-git merge "nazwa głęzi"                                     -  scalanie 2 gałęzi ze sobą - gałąź , której nazwę wpiszemy scali z gałęzią, na którą wskazuje HEAD
-git branch -d "nzwa gałęzi"                                 -  usuwanie gałęzi
-git fetch origin                                            -  synchronizuje dane na serwerze lokalnym w momencie, kiedy są one starsze niż na github serwerze
 git push "nazwa zdalnego repozytorium" "nazwa gałęzi"       -  wypychanie zmian z lokalnej głęzi do gałęzi zdalnej na serwerze github
 git clone --bare "nazwa rep" "nazwa rep".git                -  tak też można stworzyć czyste repozytorium (jest ono bez katalogu roboczego)
-git stash                                                   -  dodanie zmian do schowka (bez wysyłania commita) - przydaje się kiedy zmiany nie nadaja sie jeszcze do pusha, jednak czsowo musimy zakonczyć prace z nimi
-git stash apply                                             -  wczytanie ponowne zmian ze schowka (w celu dokończenia pracy z nimi)
 git stash --all                                             -  usunięcie z katalogu roboczego wszystkich plików (i jednoczesnie zpisanie ich w schowku)
 git clean                                                   -  usunięcie wszystkich plików, które nie są śledzone (trwałe usunięcie)
 
 linki (git w pigułce, sciągi):
+https://git-scm.com/book/pl/v2                                          pl, eng 
 https://training.github.com/downloads/pl/github-git-cheat-sheet/        pl
 https://epicdigitalguy.com/blog/2020/08/10/git-cookbook-git-poradnik/   pl
+https://itmon.pl/repozytorium-git-podstawy-git-commit/                  pl
 https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet        eng
 https://education.github.com/git-cheat-sheet-education.pdf              eng
 
